@@ -1,0 +1,21 @@
+<div class="container">
+    <h1>URL Shortener</h1>
+    <img src="/image/chain.jpg">
+    {{#if shortenUrl}}
+    <h1>您的短網址為:</h1>
+    <span id="text">http://localhost:3000/{{shortenUrl}}</span>
+    <button onClick='copy()'>點擊複製</button>
+    {{else}}
+    <form action="/add" method="POST" class="form-container">
+        <input placeholder="Input URL here" name="url" type="url" required>
+        <button>Shorten</button>
+    </form>
+    {{/if}}
+</div>
+
+<script>
+    function copy(){
+        const text = document.getElementById('text');
+        navigator.clipboard.writeText(text.innerText)
+    }
+</script>

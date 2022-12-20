@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    gap:15px;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.pic {
+    background: url('../public/image/chain.jpg');
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
