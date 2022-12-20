@@ -42,7 +42,7 @@ app.post('/add', async (req, res) => {
 app.get('/:id', async (req, res) => {
     try {
         const _id = req.params.id;
-        const url = await urlModel.find({ admins: { $elemMatch: { _id } } })
+        const url = await urlModel.find({})
             .then((data) => {
                 for(let key in data){
                     if(data[key]._id.toString().includes(_id)){
